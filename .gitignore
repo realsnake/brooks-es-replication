@@ -1,0 +1,6 @@
+# Never publish Brooks course content or quote-carrying working files.
+*transcript*.txt
+*transcript*.pdf
+replication-ground-truth*.json
+__pycache__/
+*.pyc
