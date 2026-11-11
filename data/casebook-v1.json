@@ -1,0 +1,3404 @@
+{
+ "meta": {
+  "casebook": "stage-2 casebook v1 — inventory + family classification only (no engine grading)",
+  "built": "2026-11-10 (Beijing)",
+  "sources": [
+   "replication-ground-truth-1020-oral-full.json (items, 47)",
+   "replication-ground-truth-1026-oral-upgrade.json (new_items, 50)",
+   "replication-ground-truth-1027-oral-upgrade.json (new_items, 82)",
+   "replication-ground-truth-1028-oral-upgrade.json (new_items, 60)",
+   "replication-ground-truth-1105-oral-upgrade.json (new_items, 35; meta.next_day_expectations NOT counted as items)",
+   "replication-ground-truth-1109-oral-upgrade.json (new_items, 38; meta.next_day_expectations NOT counted as items)"
+  ],
+  "total_items": 312,
+  "taxonomy": [
+   "S1-pullback",
+   "S2-failed-breakout",
+   "S3-breakout-follow",
+   "limit-order",
+   "buy-sell-close",
+   "scale-in",
+   "exit-management",
+   "veto",
+   "other"
+  ],
+  "matrix_family_by_day": {
+   "2026-10-20": {
+    "S1-pullback": 2,
+    "S2-failed-breakout": 6,
+    "S3-breakout-follow": 2,
+    "limit-order": 5,
+    "buy-sell-close": 2,
+    "scale-in": 1,
+    "exit-management": 2,
+    "veto": 20,
+    "other": 7
+   },
+   "2026-10-26": {
+    "S1-pullback": 3,
+    "S2-failed-breakout": 2,
+    "S3-breakout-follow": 3,
+    "limit-order": 11,
+    "buy-sell-close": 5,
+    "scale-in": 1,
+    "exit-management": 10,
+    "veto": 15,
+    "other": 0
+   },
+   "2026-10-27": {
+    "S1-pullback": 7,
+    "S2-failed-breakout": 2,
+    "S3-breakout-follow": 2,
+    "limit-order": 25,
+    "buy-sell-close": 8,
+    "scale-in": 2,
+    "exit-management": 15,
+    "veto": 21,
+    "other": 0
+   },
+   "2026-10-28": {
+    "S1-pullback": 2,
+    "S2-failed-breakout": 7,
+    "S3-breakout-follow": 0,
+    "limit-order": 22,
+    "buy-sell-close": 1,
+    "scale-in": 0,
+    "exit-management": 8,
+    "veto": 20,
+    "other": 0
+   },
+   "2026-11-05": {
+    "S1-pullback": 2,
+    "S2-failed-breakout": 1,
+    "S3-breakout-follow": 2,
+    "limit-order": 8,
+    "buy-sell-close": 2,
+    "scale-in": 0,
+    "exit-management": 9,
+    "veto": 11,
+    "other": 0
+   },
+   "2026-11-09": {
+    "S1-pullback": 3,
+    "S2-failed-breakout": 0,
+    "S3-breakout-follow": 1,
+    "limit-order": 10,
+    "buy-sell-close": 3,
+    "scale-in": 1,
+    "exit-management": 9,
+    "veto": 11,
+    "other": 0
+   }
+  },
+  "totals": {
+   "S1-pullback": 19,
+   "S2-failed-breakout": 18,
+   "S3-breakout-follow": 10,
+   "limit-order": 81,
+   "buy-sell-close": 21,
+   "scale-in": 5,
+   "exit-management": 53,
+   "veto": 98,
+   "other": 7
+  },
+  "entry_items_total": 154,
+  "non_entry_items_total": 158,
+  "veto_of_distribution": {
+   "S3-breakout-follow": 55,
+   "buy-sell-close": 5,
+   "null": 26,
+   "S2-failed-breakout": 4,
+   "S1-pullback": 3,
+   "limit-order": 4,
+   "scale-in": 1
+  },
+  "classification_notes": [
+   "每条恰归一族。判定依据为条目的 type/dir/bar 与简要转述（1020 用 cat/desc）。",
+   "主导机制优先：type 以 limit order 开头者计 limit-order（附带 scaling in 修饰不改族，如 1027-oral-05、1105-oral-13、1028-oral-39）；以 scale-in 为入场措辞主语者计 scale-in（如 1109-oral-04、1027-oral-20、1027-oral-33）；buy/sell the close 为主语者计 buy-sell-close（附带 scale-in 计划不改族，如 1027-oral-77/78）。",
+   "veto 一律计 veto 族，被否决的动作家族记入 veto_of；判定约定：一般的 stop-order 越 bar 入场（buy above / sell below）视为 S3-breakout-follow 机制；明说 H1/H2/L1/L2/second-entry 顺势者为 S1；失败突破/楔形/高潮/区间边缘反转语境者为 S2；buy below / sell above 为 limit-order；buy/sell the close 为 buy-sell-close；机制未明说（如 buy/sell at bar X 的纯位置否决）veto_of 记 null（共 26 条），不硬猜。",
+   "second entry 的分族：顺新兴趋势的延续型计 S1（如 1027-oral-27、1028-oral-14）；在区间支撑/底部逆 micro channel 的反转型计 S2（如 1028-oral-04/50）。",
+   "1020 的 other（7 条）是登记型条目（phase 切换、终局日型、方法注、语境确认），非口述入场/出场/否决动作，与其余五天的 other=0 不可直接比。",
+   "分日计数与各升级文件的提取报告（入场/出场/否决拆分）逐日核对一致：入场=S1+S2+S3+limit+buy-sell-close+scale-in，出场=exit-management，否决=veto（1020 为登记口径，拆分方式不同）。",
+   "本版只做盘点与分类，未做引擎命中/漏做/做错的批改（阶段 2 后半与阶段 3 的工作）。"
+  ],
+  "ambiguous_items": [
+   {
+    "date": "2026-10-20",
+    "item_id": "PH-1",
+    "note": "phase/AIL 确认本身，非入场动作，计 other；可视作 S3 的语境条目"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "AI-1",
+    "note": "Always-In 翻转确认计 S3；其可交易版本是 ST-a，两条相邻"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "ST-d",
+    "note": "按登记的楔形底多计 S2，但口述称 bar 51 是 bad buy，与登记口径有张力"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "ST-o5",
+    "note": "多头失败后 sell below 31：S3（下行跟随）与 S1（回调空）边界不清，取 S3"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "ST-o7",
+    "note": "second entry sell：取 S1（延续）；与 ST-o6（首次反转，S2）是一对边界条目"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "ST-o8",
+    "note": "一般 stop 空单，无形态标记，家族由当日腿部语境推断为 S1"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "ST-o9",
+    "note": "maybe buy above 29，语境信息不足，计 other"
+   },
+   {
+    "date": "2026-10-20",
+    "item_id": "EN-o11",
+    "note": "sell the close 条目，原文件注为并入空头出场语境；本库按机制计 buy-sell-close"
+   },
+   {
+    "date": "2026-10-26",
+    "item_id": "1026-oral-01",
+    "note": "跳空高开 scalp 多：S3（突破跟随）与 S1 边界，取 S3"
+   },
+   {
+    "date": "2026-10-26",
+    "item_id": "1026-oral-22",
+    "note": "逆 micro channel 在区间支撑首买：取 S2（区间下沿反转），激进低概率"
+   },
+   {
+    "date": "2026-10-26",
+    "item_id": "1026-oral-27",
+    "note": "sell above + scale-in short：取 scale-in，limit-order 为次选"
+   },
+   {
+    "date": "2026-10-26",
+    "item_id": "1026-oral-30",
+    "note": "区间支撑处 stop buy above 52：取 S2，与 oral-22 同类"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-05",
+    "note": "limit order 附 scaling in lower：按主导机制取 limit-order"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-20",
+    "note": "sell + sell more（scale-in）附保本出场：取 scale-in"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-27",
+    "note": "second entry sell：取 S1（顺新兴空腿）；原注提示可能是 MTR（S2）"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-33",
+    "note": "buy above 的前提是能向下 scale-in：取 scale-in"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-37",
+    "note": "双底信号 bar 上方买：取 S2（底部反转），S3 跟随为次选"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-46",
+    "note": "开盘反转段 buy above 11/12：取 S2，S3 为次选"
+   },
+   {
+    "date": "2026-10-27",
+    "item_id": "1027-oral-47",
+    "note": "复述段 buy bar 17/18、22、26 等机制未明说，按反弹延续语境计 S1（oral-47/48/49/50/59 同类）"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-04",
+    "note": "second entry long 在区间支撑：取 S2（逆 micro channel 反转），S1 为次选（oral-50 同类）"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-14",
+    "note": "second entry short：取 S1（顺下行腿延续），S2 为次选"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-16",
+    "note": "High 3 买入：取 S1（回调家族），其三次测支撑的反转味使 S2 亦可辩"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-27",
+    "note": "buy above 49 否决：veto_of 按 micro 双底+支撑语境取 S2"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-45",
+    "note": "楔形双底 stop buy（带保留）：取 S2；解说者更偏好的 limit 版本是 oral-44"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-56",
+    "note": "跳空摸昨日高点失败后 sell below 2：取 S2（失败突破反手），S3 下破跟随为次选"
+   },
+   {
+    "date": "2026-10-28",
+    "item_id": "1028-oral-60",
+    "note": "buy above 75：取 S2（底部反转序列延续）；源转录该行有两版屏读冲突，已在源文件标注"
+   },
+   {
+    "date": "2026-11-05",
+    "item_id": "1105-oral-04",
+    "note": "buy the bounce 否决：veto_of 按逆势反弹买推断为 S2"
+   },
+   {
+    "date": "2026-11-05",
+    "item_id": "1105-oral-22",
+    "note": "buy above 56 逆日趋势反转买：取 S2，S3 为次选"
+   },
+   {
+    "date": "2026-11-05",
+    "item_id": "1105-oral-25",
+    "note": "尾盘 ≈68 激进卖：取 S1（顺日级空头趋势卖反弹），S2 为次选"
+   },
+   {
+    "date": "2026-11-09",
+    "item_id": "1109-oral-04",
+    "note": "scale-in limit buy：按主导措辞取 scale-in，limit-order 为次选"
+   },
+   {
+    "date": "2026-11-09",
+    "item_id": "1109-oral-13",
+    "note": "开盘 stop entry buy above 1/2/3 总述：取 S3（开盘趋势跟随），S1 为次选"
+   }
+  ]
+ },
+ "records": [
+  {
+   "date": "2026-10-20",
+   "item_id": "PH-1",
+   "bar": "4-6",
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "phase",
+   "dir": 1,
+   "oral_ts": "3:10"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "PH-2",
+   "bar": 21,
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "phase",
+   "dir": 0,
+   "oral_ts": "21:09"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "FT-1",
+   "bar": null,
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "final_day_type",
+   "dir": 0,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "AI-1",
+   "bar": 4,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "ai_flip",
+   "dir": 1,
+   "oral_ts": "3:10"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "AI-N1",
+   "bar": 3,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "ai_veto",
+   "dir": -1,
+   "oral_ts": "2:46"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "AI-N2",
+   "bar": 21,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "ai_veto",
+   "dir": -1,
+   "oral_ts": "21:09"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-a",
+   "bar": 6,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": "20:34"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-b",
+   "bar": 20,
+   "family": "scale-in",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": "8:16"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-c",
+   "bar": 20,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": -1,
+   "oral_ts": "6:28"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-d",
+   "bar": 51,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o1",
+   "bar": 45,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": "21:33"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o3",
+   "bar": 64,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": "21:58"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o5",
+   "bar": 31,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": -1,
+   "oral_ts": "21:16"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o6",
+   "bar": 13,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": -1,
+   "oral_ts": "20:54"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o7",
+   "bar": "18/19",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": -1,
+   "oral_ts": "21:02"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o8",
+   "bar": "58/59",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": -1,
+   "oral_ts": "21:54"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o9",
+   "bar": 29,
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": "21:16"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "ST-o12",
+   "bar": "6-11",
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "setup",
+   "dir": 1,
+   "oral_ts": "23:21"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "EX-b12",
+   "bar": 12,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit_context",
+   "dir": 1,
+   "oral_ts": "5:45"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "EX-75",
+   "bar": 75,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit_context",
+   "dir": 1,
+   "oral_ts": "20:10"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "EN-o11",
+   "bar": 21,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry_family",
+   "dir": -1,
+   "oral_ts": "7:44"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-o10",
+   "bar": 36,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": "21:26"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-g5",
+   "bar": 5,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": "3:28"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-g7",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": "3:41"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-g1314",
+   "bar": "13/14",
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": "5:36"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-g19",
+   "bar": 19,
+   "family": "veto",
+   "veto_of": "buy-sell-close",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": "6:44"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-g20",
+   "bar": 20,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": "7:01"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cS1",
+   "bar": 1,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cS2",
+   "bar": 2,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cS3",
+   "bar": 28,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cS4",
+   "bar": 30,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cS5",
+   "bar": 37,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cS6",
+   "bar": 39,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": -1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cB1",
+   "bar": 1,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cB2",
+   "bar": 2,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cB3",
+   "bar": 28,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cB4",
+   "bar": 30,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cB5",
+   "bar": 40,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "V-cB6",
+   "bar": 51,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto",
+   "dir": 1,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "L-o13",
+   "bar": 25,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit_order",
+   "dir": 1,
+   "oral_ts": "8:42"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "L-o14",
+   "bar": "23/24",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit_order",
+   "dir": 1,
+   "oral_ts": "22:40"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "L-o15",
+   "bar": "42/44",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit_order",
+   "dir": 1,
+   "oral_ts": "22:48"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "L-o16",
+   "bar": "71/72",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit_order",
+   "dir": 1,
+   "oral_ts": "23:07"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "L-o17",
+   "bar": 74,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit_order",
+   "dir": 1,
+   "oral_ts": "20:03"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "M-g5",
+   "bar": 5,
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "method",
+   "dir": 1,
+   "oral_ts": "3:20"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "C-g410",
+   "bar": "4-10",
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "context",
+   "dir": 1,
+   "oral_ts": "4:03"
+  },
+  {
+   "date": "2026-10-20",
+   "item_id": "C-gB",
+   "bar": null,
+   "family": "other",
+   "veto_of": null,
+   "type_orig": "context",
+   "dir": 0,
+   "oral_ts": null
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-01",
+   "bar": 1,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup: stop entry long above bar 1 (gap up, scalp toward prior day high)",
+   "dir": 1,
+   "oral_ts": "5:57"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-02",
+   "bar": 5,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 5 (bad location, channel phase at resistance)",
+   "dir": 1,
+   "oral_ts": "7:27"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-03",
+   "bar": 6,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup: stop entry short below bar 6",
+   "dir": -1,
+   "oral_ts": "7:54"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-04",
+   "bar": 6,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: always-in longs exit below bar 6",
+   "dir": 1,
+   "oral_ts": "7:54"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-05",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell below bar 7 (bad stop order sell signal bar)",
+   "dir": -1,
+   "oral_ts": "8:22"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-06",
+   "bar": 3,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family: buy the close of bar 3",
+   "dir": 1,
+   "oral_ts": "8:56"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-07",
+   "bar": 11,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (conditional): exit longs below bar 11, re-entry allowed",
+   "dir": 1,
+   "oral_ts": "11:35"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-08",
+   "bar": 14,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 14 (re-entry / new long after pullback)",
+   "dir": 1,
+   "oral_ts": "11:35"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-09",
+   "bar": 14,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: shorts exit at bar 14 strong breakout",
+   "dir": -1,
+   "oral_ts": "11:55"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-10",
+   "bar": 15,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order sell at bar 15 (double top, bad)",
+   "dir": -1,
+   "oral_ts": "12:21"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-11",
+   "bar": 15,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family: buy the close of bar 15",
+   "dir": 1,
+   "oral_ts": "12:21"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-12",
+   "bar": 15,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 15",
+   "dir": 1,
+   "oral_ts": "12:26"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-13",
+   "bar": 16,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family: buy the close of bar 16 (outside up, new breakout)",
+   "dir": 1,
+   "oral_ts": "12:31"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-14",
+   "bar": 16,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 16",
+   "dir": 1,
+   "oral_ts": "12:38"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-15",
+   "bar": "19/20",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bars 19/20 (scalp to new high)",
+   "dir": 1,
+   "oral_ts": "13:30"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-16",
+   "bar": "25→26",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup: High 2 stop entry long (signal bar 25, bar 26 outside up)",
+   "dir": 1,
+   "oral_ts": "14:42"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-17",
+   "bar": "13 (stop for H2 longs)",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit management: stop placement for High 2 longs — proper stop below bar 13, minimum below bar 16, NOT just below bar 26",
+   "dir": 1,
+   "oral_ts": "14:56"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-18",
+   "bar": 31,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 31 (bad)",
+   "dir": 1,
+   "oral_ts": "17:08"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-19",
+   "bar": 36,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup: stop entry short below bar 36 (implied Low 2/Low 3 in tight bear channel)",
+   "dir": -1,
+   "oral_ts": "18:15"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-20",
+   "bar": "40→41",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit/cancel: cancel sell-above-bar-40 order when inside bar 41 forms",
+   "dir": -1,
+   "oral_ts": "19:22"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-21",
+   "bar": 41,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: exit shorts above bar 41 (bull bar closing on its high)",
+   "dir": -1,
+   "oral_ts": "19:28"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-22",
+   "bar": 41,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (low probability flagged): buy above bar 41 (aggressive)",
+   "dir": 1,
+   "oral_ts": "19:28"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-23",
+   "bar": 42,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup: buy at bar 42 strong breakout (higher probability; possibly buy the close)",
+   "dir": 1,
+   "oral_ts": "19:36"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-24",
+   "bar": 46,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 46 (with bad-location caution)",
+   "dir": 1,
+   "oral_ts": "21:54"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-25",
+   "bar": 47,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: exit longs below bar 47",
+   "dir": 1,
+   "oral_ts": "22:05"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-26",
+   "bar": 48,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family: sell the close of bar 48 (strong breakout bar)",
+   "dir": -1,
+   "oral_ts": "22:32"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-27",
+   "bar": 48,
+   "family": "scale-in",
+   "veto_of": null,
+   "type_orig": "setup: sell above bar 48 / scale-in short if it pulls back",
+   "dir": -1,
+   "oral_ts": "22:32"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-28",
+   "bar": "≈50/51",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: bears take profits at micro channel testing trading-range support",
+   "dir": -1,
+   "oral_ts": "23:12"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-29",
+   "bar": "≈50/51",
+   "family": "veto",
+   "veto_of": "S2-failed-breakout",
+   "type_orig": "veto: buy against the micro channel at support (difficult)",
+   "dir": 1,
+   "oral_ts": "23:26"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-30",
+   "bar": 52,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (low probability flagged): stop order buy above bar 52",
+   "dir": 1,
+   "oral_ts": "23:31"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-31",
+   "bar": 55,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: exit longs below bar 55 (reversal bar)",
+   "dir": 1,
+   "oral_ts": "24:19"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-32",
+   "bar": 55,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: short below bar 55 (middle of trading range)",
+   "dir": -1,
+   "oral_ts": "24:19"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-33",
+   "bar": 54,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 54 (resistance area)",
+   "dir": -1,
+   "oral_ts": "24:49"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-34",
+   "bar": "≈9 (High 1 / High 2 at prior day high)",
+   "family": "veto",
+   "veto_of": "S1-pullback",
+   "type_orig": "veto (recap): taking High 1 / High 2 right at the prior day's high is difficult",
+   "dir": 1,
+   "oral_ts": "27:42"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-35",
+   "bar": "9/10",
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (recap): buy the close of bar 9, or wait for follow-through and buy the close of bar 10",
+   "dir": 1,
+   "oral_ts": "27:50"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-36",
+   "bar": 24,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bar 24 (bear bar closing near its low, still always-in long)",
+   "dir": 1,
+   "oral_ts": "29:44"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-37",
+   "bar": 47,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): short below bar 47 is low probability — wait for the breakout (bar 48)",
+   "dir": -1,
+   "oral_ts": "30:56"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-38",
+   "bar": 53,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto (recap): buy at bar 53 (middle of the trading range)",
+   "dir": 1,
+   "oral_ts": "31:08"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-39",
+   "bar": 2,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): stop order sell below bar 2 (bad)",
+   "dir": -1,
+   "oral_ts": "31:21"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-40",
+   "bar": 2,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 2",
+   "dir": 1,
+   "oral_ts": "31:21"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-41",
+   "bar": 5,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): stop order sell at bar 5 (bad signal bar)",
+   "dir": -1,
+   "oral_ts": "31:29"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-42",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": "limit-order",
+   "type_orig": "veto (recap): limit buy below bar 7 — difficult location (prior day high resistance above)",
+   "dir": 1,
+   "oral_ts": "31:34"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-43",
+   "bar": 11,
+   "family": "veto",
+   "veto_of": "limit-order",
+   "type_orig": "veto (recap): traders do not buy below bar 11",
+   "dir": 1,
+   "oral_ts": "31:45"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-44",
+   "bar": 10,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 10 (at the low of bar 10)",
+   "dir": 1,
+   "oral_ts": "31:53"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-45",
+   "bar": 6,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy at breakout points like the high of bar 6",
+   "dir": 1,
+   "oral_ts": "31:58"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-46",
+   "bar": 29,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (tail): stop order buy at bar 29 is weak",
+   "dir": 1,
+   "oral_ts": "32:30"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-47",
+   "bar": 29,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "setup (tail): sell above bar 29 (reasonable)",
+   "dir": -1,
+   "oral_ts": "32:30"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-48",
+   "bar": 31,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "setup (tail): sell above bar 31",
+   "dir": -1,
+   "oral_ts": "32:35"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-49",
+   "bar": 44,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (tail): buy below bar 44",
+   "dir": 1,
+   "oral_ts": "33:03"
+  },
+  {
+   "date": "2026-10-26",
+   "item_id": "1026-oral-50",
+   "bar": 44,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (tail): stop order sell below bar 44 is weak (weak inside bar)",
+   "dir": -1,
+   "oral_ts": "33:11"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-01",
+   "bar": 5,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: buy above bar 5 (doji after three consecutive bear bars)",
+   "dir": 1,
+   "oral_ts": "2:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-02",
+   "bar": 5,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell below bar 5",
+   "dir": -1,
+   "oral_ts": "2:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-03",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: buy above bar 7 (too tight, sellers above risk)",
+   "dir": 1,
+   "oral_ts": "2:57"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-04",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell below bar 7 (triggered on bar 8, not a great sell)",
+   "dir": -1,
+   "oral_ts": "3:23"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-05",
+   "bar": 9,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 9, scaling in lower",
+   "dir": 1,
+   "oral_ts": "3:38"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-06",
+   "bar": 14,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 14 (doji)",
+   "dir": -1,
+   "oral_ts": "4:33"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-07",
+   "bar": 15,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 15",
+   "dir": 1,
+   "oral_ts": "4:50"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-08",
+   "bar": 15,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell below bar 15",
+   "dir": -1,
+   "oral_ts": "4:50"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-09",
+   "bar": 18,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 18 (second leg down into buyers)",
+   "dir": 1,
+   "oral_ts": "5:31"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-10",
+   "bar": 19,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 19 (channel too tight)",
+   "dir": -1,
+   "oral_ts": "5:39"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-11",
+   "bar": 20,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 20",
+   "dir": 1,
+   "oral_ts": "5:51"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-12",
+   "bar": 21,
+   "family": "veto",
+   "veto_of": "S1-pullback",
+   "type_orig": "veto: buy above bar 21 as High 1 (bull bar closing on its high, but not a great H1)",
+   "dir": 1,
+   "oral_ts": "6:00"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-13",
+   "bar": 22,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 22",
+   "dir": 1,
+   "oral_ts": "6:24"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-14",
+   "bar": 24,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 24",
+   "dir": -1,
+   "oral_ts": "6:24"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-15",
+   "bar": 27,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 27 (strong bull bar, reversal down likely minor)",
+   "dir": -1,
+   "oral_ts": "6:45"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-16",
+   "bar": 28,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 28 (doji)",
+   "dir": -1,
+   "oral_ts": "6:54"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-17",
+   "bar": 28,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 28",
+   "dir": 1,
+   "oral_ts": "6:54"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-18",
+   "bar": 34,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 34",
+   "dir": -1,
+   "oral_ts": "7:48"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-19",
+   "bar": 35,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 35 (not a great follow-through / entry bar for bulls)",
+   "dir": 1,
+   "oral_ts": "7:53"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-20",
+   "bar": 39,
+   "family": "scale-in",
+   "veto_of": null,
+   "type_orig": "entry family: sell at bar 39, sell more at the moving average (scale-in short), exit breakeven on the bounce",
+   "dir": -1,
+   "oral_ts": "8:20"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-21",
+   "bar": 41,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy above bar 41",
+   "dir": 1,
+   "oral_ts": "9:04"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-22",
+   "bar": 41,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 41",
+   "dir": -1,
+   "oral_ts": "9:04"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-23",
+   "bar": 42,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 42",
+   "dir": -1,
+   "oral_ts": "9:08"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-24",
+   "bar": 42,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 42",
+   "dir": 1,
+   "oral_ts": "9:16"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-25",
+   "bar": 43,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 43 (buyers not far below the doji)",
+   "dir": 1,
+   "oral_ts": "9:16"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-26",
+   "bar": 44,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 44 area (bad location for bears after trendline break in tight bull channel)",
+   "dir": -1,
+   "oral_ts": "9:25"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-27",
+   "bar": 46,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (caution flagged): stop entry short below bar 46 (second entry sell, closing on its low)",
+   "dir": -1,
+   "oral_ts": "10:19"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-28",
+   "bar": 44,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 44 (reasonable buy signal in context)",
+   "dir": 1,
+   "oral_ts": "10:40"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-29",
+   "bar": 44,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: shorts exit above bar 44",
+   "dir": -1,
+   "oral_ts": "10:40"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-30",
+   "bar": 47,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 47 (bull bar closing on its high)",
+   "dir": 1,
+   "oral_ts": "11:39"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-31",
+   "bar": 50,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: exit longs below the bar 50 low",
+   "dir": 1,
+   "oral_ts": "12:20"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-32",
+   "bar": 52,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: buy above bar 52 (doji after repeated failed upside tries)",
+   "dir": 1,
+   "oral_ts": "12:50"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-33",
+   "bar": 56,
+   "family": "scale-in",
+   "veto_of": null,
+   "type_orig": "setup (conditional): buy above bar 56 only if able to scale in lower (below bar 44, possibly the bar 21 low)",
+   "dir": 1,
+   "oral_ts": "13:09"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-34",
+   "bar": 56,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 56",
+   "dir": 1,
+   "oral_ts": "13:17"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-35",
+   "bar": 57,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 57 (not a great entry bar)",
+   "dir": 1,
+   "oral_ts": "13:34"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-36",
+   "bar": 63,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: always-in shorts exit above bar 63 (decent buy signal bar at double bottom)",
+   "dir": -1,
+   "oral_ts": "14:28"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-37",
+   "bar": 63,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 63 (bar 64 follow-through)",
+   "dir": 1,
+   "oral_ts": "14:28"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-38",
+   "bar": 65,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 65 (doji)",
+   "dir": -1,
+   "oral_ts": "14:44"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-39",
+   "bar": 65,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 65 (second leg up context)",
+   "dir": 1,
+   "oral_ts": "14:44"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-40",
+   "bar": 69,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 69 (doji)",
+   "dir": -1,
+   "oral_ts": "15:28"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-41",
+   "bar": 69,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 69",
+   "dir": 1,
+   "oral_ts": "15:28"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-42",
+   "bar": 71,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 71 (buyers below for a bounce)",
+   "dir": 1,
+   "oral_ts": "15:48"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-43",
+   "bar": 72,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 72 (bear bar, still buyers)",
+   "dir": -1,
+   "oral_ts": "15:48"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-44",
+   "bar": 4,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup (recap): sell below bar 4 (always in short below bar 4)",
+   "dir": -1,
+   "oral_ts": "16:18"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-45",
+   "bar": 11,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts exit above bar 11",
+   "dir": -1,
+   "oral_ts": "16:18"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-46",
+   "bar": "11/12",
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (recap): buy above bar 11 / bar 12 (opening reversal rally)",
+   "dir": 1,
+   "oral_ts": "16:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-47",
+   "bar": "17/18",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "entry (recap): buy bar 17 / bar 18 (rally leg)",
+   "dir": 1,
+   "oral_ts": "16:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-48",
+   "bar": 21,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "entry (recap): buy the bull bar 21",
+   "dir": 1,
+   "oral_ts": "16:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-49",
+   "bar": 22,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "entry (recap): buy bar 22",
+   "dir": 1,
+   "oral_ts": "16:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-50",
+   "bar": 26,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap): buy above bar 26",
+   "dir": 1,
+   "oral_ts": "16:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-51",
+   "bar": 29,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bar 29 (definitely)",
+   "dir": 1,
+   "oral_ts": "16:35"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-52",
+   "bar": 32,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bar 32 (certainly reasonable)",
+   "dir": 1,
+   "oral_ts": "16:45"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-53",
+   "bar": 34,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto (recap): do not buy bar 34 (too much risk of a second leg down)",
+   "dir": 1,
+   "oral_ts": "16:45"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-54",
+   "bar": 42,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts get out above bar 42 (okay; definitely above 44 already counted)",
+   "dir": -1,
+   "oral_ts": "16:52"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-55",
+   "bar": 46,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): longs get out below bar 46 (probably okay)",
+   "dir": 1,
+   "oral_ts": "17:01"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-56",
+   "bar": 48,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): longs who bought above bar 47 get out below bar 48",
+   "dir": 1,
+   "oral_ts": "17:09"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-57",
+   "bar": 52,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): get out of longs below bar 52 (worth it, doji)",
+   "dir": 1,
+   "oral_ts": "17:26"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-58",
+   "bar": 46,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit management (recap): shorts from below bar 46 — rely on the stop (above 46) or exit breakeven after bar 48",
+   "dir": -1,
+   "oral_ts": "17:34"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-59",
+   "bar": 53,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap): bears sell at bar 53",
+   "dir": -1,
+   "oral_ts": "17:43"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-60",
+   "bar": 57,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts from bar 53 get out above bar 57",
+   "dir": -1,
+   "oral_ts": "17:43"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-61",
+   "bar": 57,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit management (recap): bulls who bought (bar 56 area) get stopped out below bar 57",
+   "dir": 1,
+   "oral_ts": "17:51"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-62",
+   "bar": 72,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): longs from the bar 63 buy get out below bar 72",
+   "dir": 1,
+   "oral_ts": "18:01"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-63",
+   "bar": 1,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): sellers above bar 1",
+   "dir": -1,
+   "oral_ts": "18:08"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-64",
+   "bar": 3,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buyers below bar 3",
+   "dir": 1,
+   "oral_ts": "18:18"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-65",
+   "bar": 1,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buyers below bar 1",
+   "dir": 1,
+   "oral_ts": "18:18"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-66",
+   "bar": 6,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buyers below bar 6",
+   "dir": 1,
+   "oral_ts": "18:39"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-67",
+   "bar": 7,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buyers below bar 7",
+   "dir": 1,
+   "oral_ts": "18:39"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-68",
+   "bar": 7,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap, tough flagged): sellers above bar 7",
+   "dir": -1,
+   "oral_ts": "18:45"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-69",
+   "bar": 19,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 19",
+   "dir": 1,
+   "oral_ts": "18:54"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-70",
+   "bar": 23,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 23",
+   "dir": 1,
+   "oral_ts": "18:54"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-71",
+   "bar": "27/28",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): sell out of longs at new highs after bars 27/28 (scale out toward measured-move targets, trade small)",
+   "dir": 1,
+   "oral_ts": "19:01"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-72",
+   "bar": 33,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): sellers above bar 33",
+   "dir": -1,
+   "oral_ts": "19:42"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-73",
+   "bar": 64,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 64 during bar 65",
+   "dir": 1,
+   "oral_ts": "19:53"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-74",
+   "bar": 4,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail, tough flagged): sell the close of bar 4",
+   "dir": -1,
+   "oral_ts": "20:07"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-75",
+   "bar": 12,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 12",
+   "dir": 1,
+   "oral_ts": "20:07"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-76",
+   "bar": 13,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 13",
+   "dir": 1,
+   "oral_ts": "20:07"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-77",
+   "bar": 22,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 22 (wide stop, scale in)",
+   "dir": 1,
+   "oral_ts": "20:14"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-78",
+   "bar": 23,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 23 (scale in)",
+   "dir": 1,
+   "oral_ts": "20:14"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-79",
+   "bar": "38/39",
+   "family": "veto",
+   "veto_of": "buy-sell-close",
+   "type_orig": "veto (tail): no sell the close after three consecutive bear bars at the moving average",
+   "dir": -1,
+   "oral_ts": "20:23"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-80",
+   "bar": 66,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 66 (probable)",
+   "dir": 1,
+   "oral_ts": "20:31"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-81",
+   "bar": 67,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 67 (definitely)",
+   "dir": 1,
+   "oral_ts": "20:31"
+  },
+  {
+   "date": "2026-10-27",
+   "item_id": "1027-oral-82",
+   "bar": 68,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (tail): buy the close of bar 68 (definitely)",
+   "dir": 1,
+   "oral_ts": "20:39"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-01",
+   "bar": 3,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 3 (bad signal bar)",
+   "dir": 1,
+   "oral_ts": "3:15"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-02",
+   "bar": 4,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 4",
+   "dir": -1,
+   "oral_ts": "3:49"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-03",
+   "bar": 5,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: bears exit shorts above bar 5",
+   "dir": -1,
+   "oral_ts": "4:07"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-04",
+   "bar": 5,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 5 (second entry long preferred)",
+   "dir": 1,
+   "oral_ts": "4:15"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-05",
+   "bar": 6,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 6",
+   "dir": 1,
+   "oral_ts": "4:37"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-06",
+   "bar": 18,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: bears buy back shorts above bar 18",
+   "dir": -1,
+   "oral_ts": "7:12"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-07",
+   "bar": 18,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 18",
+   "dir": 1,
+   "oral_ts": "7:12"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-08",
+   "bar": 22,
+   "family": "veto",
+   "veto_of": "S2-failed-breakout",
+   "type_orig": "veto: sell against the momentum at bar 22",
+   "dir": -1,
+   "oral_ts": "7:56"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-09",
+   "bar": 22,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 22",
+   "dir": 1,
+   "oral_ts": "7:56"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-10",
+   "bar": 23,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 23",
+   "dir": 1,
+   "oral_ts": "8:05"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-11",
+   "bar": 25,
+   "family": "veto",
+   "veto_of": "S1-pullback",
+   "type_orig": "veto: High 1 buy at bar 25 (location not ideal)",
+   "dir": 1,
+   "oral_ts": "8:33"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-12",
+   "bar": 27,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order sell below bar 27 (weak)",
+   "dir": -1,
+   "oral_ts": "9:04"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-13",
+   "bar": 27,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 27",
+   "dir": 1,
+   "oral_ts": "9:04"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-14",
+   "bar": 28,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (qualified): stop entry short below bar 28 (second entry short; waiting for a strong breakout preferred)",
+   "dir": -1,
+   "oral_ts": "9:19"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-15",
+   "bar": 29,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell at bar 29 breakout follow-through (location near support)",
+   "dir": -1,
+   "oral_ts": "9:41"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-16",
+   "bar": 36,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 36 (High 3, at least for a scalp)",
+   "dir": 1,
+   "oral_ts": "11:49"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-17",
+   "bar": 37,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 37",
+   "dir": 1,
+   "oral_ts": "11:57"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-18",
+   "bar": 37,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell below bar 37 (weak signal bar, bad location just above support)",
+   "dir": -1,
+   "oral_ts": "12:04"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-19",
+   "bar": "41/42",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: bulls take profits at the bar 41 climactic breakout / bar 42 exhaustion gap",
+   "dir": 1,
+   "oral_ts": "14:33"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-20",
+   "bar": 43,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 43 (weak)",
+   "dir": 1,
+   "oral_ts": "14:48"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-21",
+   "bar": 43,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 43",
+   "dir": -1,
+   "oral_ts": "14:48"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-22",
+   "bar": 45,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 45 (bad, micro channel)",
+   "dir": 1,
+   "oral_ts": "15:01"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-23",
+   "bar": 45,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 45",
+   "dir": -1,
+   "oral_ts": "15:01"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-24",
+   "bar": "≈46-48",
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buys in the micro channel after bar 45 (weak)",
+   "dir": 1,
+   "oral_ts": "15:11"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-25",
+   "bar": "≈46-48",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above the micro channel bars after bar 45",
+   "dir": -1,
+   "oral_ts": "15:11"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-26",
+   "bar": 49,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: exit shorts above bar 49",
+   "dir": -1,
+   "oral_ts": "15:43"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-27",
+   "bar": 49,
+   "family": "veto",
+   "veto_of": "S2-failed-breakout",
+   "type_orig": "veto: buy above bar 49 (low probability)",
+   "dir": 1,
+   "oral_ts": "15:43"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-28",
+   "bar": 56,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 56 (bad)",
+   "dir": 1,
+   "oral_ts": "18:21"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-29",
+   "bar": 56,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 56",
+   "dir": -1,
+   "oral_ts": "18:21"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-30",
+   "bar": 57,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 57 (bad signal)",
+   "dir": 1,
+   "oral_ts": "18:30"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-31",
+   "bar": 57,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 57",
+   "dir": -1,
+   "oral_ts": "18:30"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-32",
+   "bar": 60,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 60 (strong bar but difficult location)",
+   "dir": 1,
+   "oral_ts": "19:19"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-33",
+   "bar": 60,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 60",
+   "dir": 1,
+   "oral_ts": "19:59"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-34",
+   "bar": 61,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: buy above bar 61 (bad stop order; upside limited to top of range)",
+   "dir": 1,
+   "oral_ts": "20:48"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-35",
+   "bar": 63,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order sell below bar 63 (forces entry in the middle of the range, not ideal)",
+   "dir": -1,
+   "oral_ts": "21:14"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-36",
+   "bar": 63,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 63 (in the sell zone, upper half of the bar)",
+   "dir": -1,
+   "oral_ts": "21:25"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-37",
+   "bar": 65,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order buy at bar 65 (bad signal, top of range)",
+   "dir": 1,
+   "oral_ts": "22:13"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-38",
+   "bar": 65,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 65",
+   "dir": -1,
+   "oral_ts": "22:13"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-39",
+   "bar": 65,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 65 (scaling in lower)",
+   "dir": 1,
+   "oral_ts": "22:22"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-40",
+   "bar": 66,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: buy above bar 66 (middle of a trading range)",
+   "dir": 1,
+   "oral_ts": "22:49"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-41",
+   "bar": 66,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 66",
+   "dir": -1,
+   "oral_ts": "22:53"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-42",
+   "bar": 67,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 67",
+   "dir": -1,
+   "oral_ts": "23:00"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-43",
+   "bar": 68,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 68",
+   "dir": 1,
+   "oral_ts": "23:13"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-44",
+   "bar": 69,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 69",
+   "dir": 1,
+   "oral_ts": "23:58"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-45",
+   "bar": 69,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (qualified): stop order buy above bar 69 is okay, but buying the pullback below the bar / at its midpoint is better",
+   "dir": 1,
+   "oral_ts": "24:06"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-46",
+   "bar": 70,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: bears exit shorts above bar 70",
+   "dir": -1,
+   "oral_ts": "24:45"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-47",
+   "bar": 70,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup: buy above bar 70 (for a scalp)",
+   "dir": 1,
+   "oral_ts": "24:45"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-48",
+   "bar": "71/72",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bars 71 and 72",
+   "dir": 1,
+   "oral_ts": "24:59"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-49",
+   "bar": 72,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: bears exit shorts above bar 72",
+   "dir": -1,
+   "oral_ts": "25:10"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-50",
+   "bar": 72,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup: buy at bar 72 (second entry long, for a scalp)",
+   "dir": 1,
+   "oral_ts": "25:10"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-51",
+   "bar": 72,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family: buy the close of bar 72 (and buy below) for a second leg up",
+   "dir": 1,
+   "oral_ts": "25:19"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-52",
+   "bar": 77,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: stop order sell below bar 77 (bad)",
+   "dir": -1,
+   "oral_ts": "25:53"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-53",
+   "bar": 77,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 77",
+   "dir": 1,
+   "oral_ts": "25:53"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-54",
+   "bar": 78,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit: take profits above bar 78 (top of the range)",
+   "dir": 1,
+   "oral_ts": "26:14"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-55",
+   "bar": "79/78",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bars 79/78 on the pullback into the range",
+   "dir": 1,
+   "oral_ts": "27:09"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-56",
+   "bar": 2,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (recap): stop entry short below bar 2 (reasonable)",
+   "dir": -1,
+   "oral_ts": "27:41"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-57",
+   "bar": 4,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): scalp out of shorts by bar 4",
+   "dir": -1,
+   "oral_ts": "27:41"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-58",
+   "bar": 14,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): short below bar 14 (forces entry too low)",
+   "dir": -1,
+   "oral_ts": "28:15"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-59",
+   "bar": 30,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): buy above bar 30 (upside limited, sellers nearby above)",
+   "dir": 1,
+   "oral_ts": "29:06"
+  },
+  {
+   "date": "2026-10-28",
+   "item_id": "1028-oral-60",
+   "bar": 75,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (top-up recap): buy above bar 75 (reasonable)",
+   "dir": 1,
+   "oral_ts": "30:58"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-01",
+   "bar": 1,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup: stop entry short below bar 1 (stop above bar 1)",
+   "dir": -1,
+   "oral_ts": "0:38"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-02",
+   "bar": 3,
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup: sell at bar 3, stop above bar 1, hold for measured move down",
+   "dir": -1,
+   "oral_ts": "1:03"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-03",
+   "bar": 6,
+   "family": "veto",
+   "veto_of": "limit-order",
+   "type_orig": "veto: buy below bar 6 (low probability, against bars 1-6 micro channel)",
+   "dir": 1,
+   "oral_ts": "1:26"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-04",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": "S2-failed-breakout",
+   "type_orig": "veto: buy the bounce at bar 7 (outside down; too much selling)",
+   "dir": 1,
+   "oral_ts": "1:47"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-05",
+   "bar": 10,
+   "family": "veto",
+   "veto_of": "buy-sell-close",
+   "type_orig": "veto: sell the close of bar 10 (10 consecutive bear bars, climactic)",
+   "dir": -1,
+   "oral_ts": "2:30"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-06",
+   "bar": 13,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 13 (dangerous in fairly tight bear channel)",
+   "dir": 1,
+   "oral_ts": "3:09"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-07",
+   "bar": "23/24",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (conditional): buyers at bars 23/24 get out if the rally stalls instead of breaking out strongly",
+   "dir": 1,
+   "oral_ts": "4:55"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-08",
+   "bar": 28,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 28 (pause bar, not a great buy)",
+   "dir": 1,
+   "oral_ts": "5:28"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-09",
+   "bar": 31,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buyers at the low of bar 17 (limit buy at prior low, stated at bar 31)",
+   "dir": 1,
+   "oral_ts": "5:55"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-10",
+   "bar": 39,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy or sell at bar 39 (doji — neither side is great)",
+   "dir": 0,
+   "oral_ts": "6:48"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-11",
+   "bar": 58,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 58 / at the breakout point",
+   "dir": 1,
+   "oral_ts": "8:37"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-12",
+   "bar": 69,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: buy above bar 69 (strong follow-through bar, but not a great buy above; sellers risk above)",
+   "dir": 1,
+   "oral_ts": "10:21"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-13",
+   "bar": 70,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: sell above bar 70 (doji), scale in higher",
+   "dir": -1,
+   "oral_ts": "10:31"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-14",
+   "bar": 73,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: be short at bar 73 (second leg down reversed up on the same bar)",
+   "dir": -1,
+   "oral_ts": "10:58"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-15",
+   "bar": 12,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): opening shorts exit above bar 12 (probable)",
+   "dir": -1,
+   "oral_ts": "11:46"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-16",
+   "bar": "14/15",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap): bears re-sell at bar 14 or 15 after exiting above bar 12",
+   "dir": -1,
+   "oral_ts": "11:46"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-17",
+   "bar": "18/20",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts definitely exit above bar 18 or bar 20",
+   "dir": -1,
+   "oral_ts": "11:46"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-18",
+   "bar": 26,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): bulls who bought the rally exit below bar 26, definitely below bars 27/28",
+   "dir": 1,
+   "oral_ts": "11:52"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-19",
+   "bar": 34,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): buy above bar 34 is lower probability (tight channel)",
+   "dir": 1,
+   "oral_ts": "11:59"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-20",
+   "bar": "35/36",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap, conditional): if you bought above bar 34, exit below bar 35/36",
+   "dir": 1,
+   "oral_ts": "11:59"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-21",
+   "bar": 44,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): bears definitely exit above bar 44 (bull bar closing on its high)",
+   "dir": -1,
+   "oral_ts": "12:06"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-22",
+   "bar": 56,
+   "family": "S2-failed-breakout",
+   "veto_of": null,
+   "type_orig": "setup (recap): buy above bar 56",
+   "dir": 1,
+   "oral_ts": "12:24"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-23",
+   "bar": 59,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): longs from above bar 56 exit below bar 59 (if not already out at 58)",
+   "dir": 1,
+   "oral_ts": "12:24"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-24",
+   "bar": 67,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): if still long late in the day, exit below bar 67",
+   "dir": 1,
+   "oral_ts": "12:35"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-25",
+   "bar": "≈68",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap, aggressive): aggressive bears may sell around bar 68 (late day)",
+   "dir": -1,
+   "oral_ts": "12:35"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-26",
+   "bar": 69,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): aggressive late-day shorts exit above bar 69",
+   "dir": -1,
+   "oral_ts": "12:44"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-27",
+   "bar": 69,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto (recap): stop-order entries this late in the day (after ~bar 69) — too late; limit orders only",
+   "dir": 0,
+   "oral_ts": "12:44"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-28",
+   "bar": 6,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): sell above bar 6 (reasonable, but tough with such big bars)",
+   "dir": -1,
+   "oral_ts": "12:51"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-29",
+   "bar": 12,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): sell above bar 12 (tough — bars are very big)",
+   "dir": -1,
+   "oral_ts": "12:51"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-30",
+   "bar": 19,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 19 (tough to take, but reasonable)",
+   "dir": 1,
+   "oral_ts": "13:09"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-31",
+   "bar": 55,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 55 (wide stop required; betting on a test of bar 45 area)",
+   "dir": 1,
+   "oral_ts": "13:33"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-32",
+   "bar": "69/70/71",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bars 69, 70 or 71 (aggressive, late in the day)",
+   "dir": 1,
+   "oral_ts": "13:46"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-33",
+   "bar": "all (bear trend day)",
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (recap): sell the close of any bar and scalp out (trade small; bars are big)",
+   "dir": -1,
+   "oral_ts": "13:56"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-34",
+   "bar": 15,
+   "family": "veto",
+   "veto_of": "buy-sell-close",
+   "type_orig": "veto (recap): sell the close of bar 15 (a little too low to want to sell)",
+   "dir": -1,
+   "oral_ts": "14:12"
+  },
+  {
+   "date": "2026-11-05",
+   "item_id": "1105-oral-35",
+   "bar": 63,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (recap): buy the close of bar 63 (tentative — 'maybe')",
+   "dir": 1,
+   "oral_ts": "14:22"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-01",
+   "bar": 2,
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family: buy the close of bar 2 (narrator's own trade)",
+   "dir": 1,
+   "oral_ts": "1:44"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-02",
+   "bar": "1 (stop for bar-2 long)",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit management: stop below bar 1 for the buy-the-close long (alternative: exit on hesitation)",
+   "dir": 1,
+   "oral_ts": "1:51"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-03",
+   "bar": 7,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 7 / first reversal down (expected minor)",
+   "dir": -1,
+   "oral_ts": "2:25"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-04",
+   "bar": 20,
+   "family": "scale-in",
+   "veto_of": null,
+   "type_orig": "entry family: scale-in limit buy below bar 20, adding lower near the moving average",
+   "dir": 1,
+   "oral_ts": "3:11"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-05",
+   "bar": 22,
+   "family": "veto",
+   "veto_of": "limit-order",
+   "type_orig": "veto: sell above bar 22 (doji, not a great sell)",
+   "dir": -1,
+   "oral_ts": "3:18"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-06",
+   "bar": "36 (stop placement)",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit management: move stop to below bar 36",
+   "dir": 1,
+   "oral_ts": "4:30"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-07",
+   "bar": 42,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 42 (bull bar, not a great buy)",
+   "dir": 1,
+   "oral_ts": "5:03"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-08",
+   "bar": 49,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order: buy below bar 49",
+   "dir": 1,
+   "oral_ts": "5:45"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-09",
+   "bar": 59,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 59 (doji, not a great buy)",
+   "dir": 1,
+   "oral_ts": "6:48"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-10",
+   "bar": 62,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: buy at bar 62 (strong bull bar but dangerous — late leg at the 7,600 round number)",
+   "dir": 1,
+   "oral_ts": "7:18"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-11",
+   "bar": 65,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto: sell at bar 65 (outside down after two legs down — difficult bar to sell)",
+   "dir": -1,
+   "oral_ts": "7:43"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-12",
+   "bar": 70,
+   "family": "veto",
+   "veto_of": "S3-breakout-follow",
+   "type_orig": "veto: sell below bar 70 (doji, not a great sell)",
+   "dir": -1,
+   "oral_ts": "8:30"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-13",
+   "bar": "1/2/3",
+   "family": "S3-breakout-follow",
+   "veto_of": null,
+   "type_orig": "setup (recap): stop entry buy above bars 1, 2, 3 — buy anywhere, wide stop, trade small",
+   "dir": 1,
+   "oral_ts": "9:21"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-14",
+   "bar": "1-19 (opening trend)",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below any bar in the opening trend",
+   "dir": 1,
+   "oral_ts": "9:21"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-15",
+   "bar": 28,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts taken at bar 19 must exit on bull bar 28",
+   "dir": -1,
+   "oral_ts": "9:30"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-16",
+   "bar": "26/28",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap): buy above bar 26 / buy bar 28",
+   "dir": 1,
+   "oral_ts": "9:38"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-17",
+   "bar": 26,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts exit above bar 26",
+   "dir": -1,
+   "oral_ts": "9:38"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-18",
+   "bar": "30/31",
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap): buy above bars 30/31 — buy anywhere in this stretch",
+   "dir": 1,
+   "oral_ts": "9:47"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-19",
+   "bar": 39,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bar 39",
+   "dir": 1,
+   "oral_ts": "9:47"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-20",
+   "bar": 48,
+   "family": "S1-pullback",
+   "veto_of": null,
+   "type_orig": "setup (recap): buy above bar 48",
+   "dir": 1,
+   "oral_ts": "9:56"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-21",
+   "bar": 48,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): shorts exit above bar 48",
+   "dir": -1,
+   "oral_ts": "9:56"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-22",
+   "bar": 53,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bar 53",
+   "dir": 1,
+   "oral_ts": "9:56"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-23",
+   "bar": 63,
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bar 63 (too close to the 7,600 round number)",
+   "dir": 1,
+   "oral_ts": "10:10"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-24",
+   "bar": "64-68 (post-63 zone)",
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto (recap): buying again after bar 63 is tough (incl. bar 68 not a great buy)",
+   "dir": 1,
+   "oral_ts": "10:10"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-25",
+   "bar": 69,
+   "family": "veto",
+   "veto_of": null,
+   "type_orig": "veto (recap): buy at bar 69 (dangerous — already at the 63 high / 7,600 resistance, upside limited)",
+   "dir": 1,
+   "oral_ts": "10:26"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-26",
+   "bar": "73/74",
+   "family": "exit-management",
+   "veto_of": null,
+   "type_orig": "exit (recap): exit longs below bars 73/74",
+   "dir": 1,
+   "oral_ts": "10:36"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-27",
+   "bar": 11,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 11",
+   "dir": 1,
+   "oral_ts": "10:42"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-28",
+   "bar": 29,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 29",
+   "dir": 1,
+   "oral_ts": "10:50"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-29",
+   "bar": "~30-48 (moving average)",
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy at the moving average on the midday test",
+   "dir": 1,
+   "oral_ts": "10:58"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-30",
+   "bar": 50,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 50 (the one that triggered)",
+   "dir": 1,
+   "oral_ts": "10:58"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-31",
+   "bar": 59,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 59",
+   "dir": 1,
+   "oral_ts": "11:06"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-32",
+   "bar": 48,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): buy below bar 48",
+   "dir": 1,
+   "oral_ts": "11:06"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-33",
+   "bar": 62,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): sell above bar 62 (tough trade, but reasonable)",
+   "dir": -1,
+   "oral_ts": "11:15"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-34",
+   "bar": 71,
+   "family": "limit-order",
+   "veto_of": null,
+   "type_orig": "limit order (recap): sell above bar 71",
+   "dir": -1,
+   "oral_ts": "11:15"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-35",
+   "bar": "71/72",
+   "family": "veto",
+   "veto_of": "scale-in",
+   "type_orig": "veto (recap): do not add / scale in long up here (position already too heavy, though arguably sensible)",
+   "dir": 1,
+   "oral_ts": "11:23"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-36",
+   "bar": "1/3",
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (recap): buy the close of bars 1 and 3",
+   "dir": 1,
+   "oral_ts": "11:33"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-37",
+   "bar": "1-3 (day-wide)",
+   "family": "veto",
+   "veto_of": "buy-sell-close",
+   "type_orig": "veto (recap): do not sell the close (no good sell-the-close today)",
+   "dir": -1,
+   "oral_ts": "11:33"
+  },
+  {
+   "date": "2026-11-09",
+   "item_id": "1109-oral-38",
+   "bar": "27/28",
+   "family": "buy-sell-close",
+   "veto_of": null,
+   "type_orig": "entry family (recap): buy the close of bars 27/28",
+   "dir": 1,
+   "oral_ts": "11:37"
+  }
+ ]
+}
